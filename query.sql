@@ -12,3 +12,5 @@ note_title varchar(200) not null,
 note_description TEXT not null,
 note_author varchar(200) not null
 );
+
+insert into users (user_id,username,password,gender) values (1,'jeffrey','helloworld',1);
