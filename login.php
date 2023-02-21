@@ -51,6 +51,7 @@
 ?>
 
 <!DOCTYPE html>
+<!-- Start of HTML -->
 <html>
   <head>
     <title>Login</title>
