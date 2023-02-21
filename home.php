@@ -11,19 +11,36 @@ session_start();
         background-color: #f2f2f2;
         margin: 0;
         padding: 0;
+        background-color: #E7F2F8;
+        opacity: 1;
+        background-image:  radial-gradient(#74BDCB 2px, transparent 2px), radial-gradient(#74BDCB 2px, #E7F2F8 2px);
+        background-size: 80px 80px;
+        background-position: 0 0,40px 40px;
       }
       header {
-        background-color: #fff;
+        text-align: center;
+        font-family: "Georgia", serif;
+        background-color: #FFA384;
         padding: 20px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        background-color: #FFA384;
+        opacity: 1;
+        background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #FFA384 40px ), 
+          repeating-linear-gradient( #EFE7BC55, #EFE7BC );
       }
       h1 {
-        margin: 1;
-        font-size: 2em;
+        margin: 0;
+        font-size: 3em;
+        color: brown;
+      }
+      h2 {
+        font-size: 25px;
+        color: brown;
       }
       nav {
-        background-color: #333;
-        color: #fff;
+        background-color: #74BDCB;
+        color: #EFE7BC;
+        font-size: 20px;
         display: flex;
         justify-content: space-between;
         padding: 10px;
@@ -46,10 +63,6 @@ session_start();
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       }
-      h2 {
-        margin-top: 0;
-        font-size: 1.5em;
-      }
       ul {
         list-style: none;
         margin: 0;
@@ -66,7 +79,7 @@ session_start();
   <body>
     <header>
       <h1>SNA Restaurant</h1>
-      <h1>Welcome <?php echo $_SESSION["username"] ?></h1>
+      <h2>Welcome, <?php echo $_SESSION["username"] ?>!</h2>
     </header>
     <nav>
       <a href="#">Home</a>

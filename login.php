@@ -6,14 +6,7 @@
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include "db_connect.php";
    // To retrieve the user's creds (username & password) from the form db
-
-
-  session_start();
-  
-  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    include "db_connect.php";
    
-
     if (isset($_POST['username']) && isset($_POST['password'])) {
         function validate($data){
     
@@ -33,17 +26,10 @@
         if (empty($username)) {
             header("Location: login.php?error=User Name is required");
             exit();
-    	// validation if the password's field is empty
-
-    	
-        if (empty($username)) {
-            header("Location: login.php?error=User Name is required");
-            exit();
 
         }else if(empty($password)){
             header("Location: login.php?error=Password is required");
             exit();
-	
         }
 	
 	// if the user passed/meet the requirements
@@ -79,7 +65,7 @@
   </head>
   <body>
     <div class="wrapper">
-			<h1>Login</h1>
+			<!-- <h1>Login</h1> -->
 			<div><span class="dot"></span></div>
 			<div><span class="dot"></span></div>
 			<div><span class="dot"></span></div>
@@ -100,6 +86,8 @@
 	 <!-- Start of the login form -->
     <div class="box">
       <form action="login.php" method="post">
+      <h1>SNA Restaurant</h1>
+      <h2>Welcome to SNA Restaurant!</h2>
          <label for="username">Username:</label>
          <input type="text" id="username" name="username"><br>
 
