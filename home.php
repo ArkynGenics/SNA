@@ -18,7 +18,7 @@ session_start();
         box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       }
       h1 {
-        margin: 0;
+        margin: 1;
         font-size: 2em;
       }
       nav {
