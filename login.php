@@ -1,10 +1,10 @@
 <?php
-  // Start a session
+  // Start the session
   session_start();
-  // Check if the form has been submitted
+  // To check whether the form has been submitted
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include "db_connect.php";
-    // Retrieve the username and password from the form data
+    // To retrieve the user's creds (username & password) from the form db
     if (isset($_POST['username']) && isset($_POST['password'])) {
         function validate($data){
     
@@ -19,14 +19,15 @@
         }
         $username = validate($_POST['username']);
         $password = validate($_POST['password']);
-    
+    	// validation if the username field is empty
         if (empty($username)) {
             header("Location: login.php?error=User Name is required");
             exit();
-    
+    	// validation if the password field is empty
         }else if(empty($password)){
             header("Location: login.php?error=Password is required");
             exit();
+	// if the user passed the requirements
         }
         else{
             $sql = "SELECT * FROM users WHERE username='$username' AND password='$password' limit 1";
@@ -76,6 +77,7 @@
 			<div><span class="dot"></span></div>
 			<div><span class="dot"></span></div>
 		</div>
+	<!-- Start of the login form -->
     <div class="box">
       <form action="login.php" method="post">
          <label for="username">Username:</label>
@@ -91,5 +93,6 @@
         <input type="submit" value="Login">
       </form>
     </div>
+	  <!-- End of the login form -->
   </body>
 </html>
