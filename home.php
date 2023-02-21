@@ -65,7 +65,7 @@ session_start();
   </head>
   <body>
     <header>
-      <h1>:V :D :X :3</h1>
+      <h1>SNA Restaurant</h1>
       <h1>Welcome <?php echo $_SESSION["username"] ?></h1>
     </header>
     <nav>
