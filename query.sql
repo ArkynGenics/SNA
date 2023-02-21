@@ -3,7 +3,7 @@ use SNA_test;
 create table users(
 user_id integer primary key,
 username varchar(200) unique not null,
-password varchar(200)not null,
+password varchar(200) not null,
 gender int not null -- 1 male 0 female
 );
 create table notes(
